@@ -1,0 +1,26 @@
+@import "compass/css3/border-radius";
+//@import "compass/css3/filter";
+
+
+
+md-tabs{
+
+  @include border-radius(0px);
+ // @include filter(blur(4px));
+  md-ink-bar{
+    height: 3px;
+  }
+}
+
+
+md-tab-content {
+  //min-width: 9999px;
+  // position: absolute;
+}
+
+md-tab-no-content {
+  //min-width: 9999px;
+  //position: absolute;
+
+}
+

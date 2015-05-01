@@ -1,0 +1,89 @@
+@import "compass/css3/border-radius";
+//@import "compass/css3/box-shadow";
+//@import "compass/css3/text-shadow";
+//@import "compass/css3/images";
+//@import "compass/css3/background-size";gulp
+@import "compass/css3/animation";
+//@import "compass/css3/transition";
+@import "compass/css3/filter";
+//@import "compass/css3/font-face";
+//@import "compass/css3/inline-block";
+//@import "compass/css3/user-interface";
+
+
+@import "../../../app/components/navbar/navbar";
+@import "../../../app/components/main/main";
+@import "../../../app/components/channels/channels";
+@import "../../../app/components/hero/hero";
+@import "../../../app/components/media/player/player";
+@import "../../../app/components/recommended/recommended";
+
+body{
+  @include border-top-radius(8px);
+  border-radius: 8px !important;
+  background-color: rgba(0,0,0,0) !important;
+
+}
+
+md-list .md-button {
+  color: inherit;
+  font-weight: 400;
+  text-align: left;
+  width: 100%;
+}
+
+.player{
+
+}
+//::-webkit-scrollbar {
+  //display: none;
+//}
+
+.animate-enter {
+  -webkit-transition: 1s linear all; /* Chrome */
+  transition: 1s linear all;
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+@include keyframes(move-up) {
+    from { top: 0px;}
+    to { top: -300px;}
+}
+@include keyframes(move-dwn) {
+    from { top: -300px;}
+    to { top: 0px;}
+}
+
+@include keyframes(fade-in) {
+    from { opacity: 0;}
+    to { opacity: .3;}
+}
+
+@include keyframes(fade-out) {
+    from { opacity: .3;}
+    to { opacity: 0;}
+}
+
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('pacifico.eot');
+  src: url('pacifico.eot?#iefix') format('embedded-opentype'),
+  url('pacifico.woff') format('woff'),
+  url('pacifico.ttf') format('truetype'),
+  url('pacifico.svg#Pacifico') format('svg');
+}
+
+
+.slick-slide .image{padding:30px;}
+.slick-slide img{border:2px solid #FFF;display:block;width:100%;}
+.slick-slide img.slick-loading{border:0 }
+.slick-slider{margin:0px auto 50px;}

@@ -1,0 +1,90 @@
+@import "compass/css3/animation";
+
+
+.recommended{
+
+  &.ng-enter {
+    @include animation(fade-in .2s ease-out);
+
+  }
+
+
+}
+
+
+
+.ng-animate {
+  &.ng-enter {
+    @include animation(fade-in .2s ease-out);
+
+  }
+
+  &.ng-click {
+
+    //@include animation(fade-out .4s ease-out);
+  }
+}
+
+
+.animate-repeat {
+  //line-height:40px;
+  //list-style:none;
+  /*box-sizing:border-box;*/
+  //border-bottom: 1px solid white;
+  //-webkit-transition: .3s ease all;
+  //transition: .3s ease all;
+}
+
+
+
+.animate-repeat.ng-enter{
+  opacity:0;
+  // max-height:0;
+}
+
+//.animate-repeat.ng-leave-stagger {
+//  /* this will have a 100ms delay between each successive leave animation */
+//  //-webkit-transition-delay: 0.2s;
+// // transition-delay: 0.2s;
+//
+////  -webkit-transition-duration: 0s;
+//  //transition-duration: 0s;
+//}
+
+/**
+ * Stagger ENTER ANIMATION
+ */
+.animate-repeat.ng-enter-stagger {
+
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+}
+
+
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+  transition: all ease 250ms ;
+}
+
+
+@include keyframes(move-up) {
+  from { top: 0px;}
+  to { top: -300px;}
+}
+@include keyframes(move-dwn) {
+  from { top: -300px;}
+  to { top: 0px;}
+}
+
+@include keyframes(fade-in) {
+  from { opacity: 0;}
+  to { opacity: .3;}
+}
+
+@include keyframes(fade-out) {
+  from { opacity: .3;}
+  to { opacity: 0;}
+}

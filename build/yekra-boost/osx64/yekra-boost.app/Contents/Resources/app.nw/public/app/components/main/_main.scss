@@ -1,0 +1,29 @@
+@import "compass/css3/border-radius";
+
+.sample {
+//height: inherit;
+ max-width: 100%;
+
+md-tabs{
+
+@include border-radius(0px);
+//padding: 0;
+  //position: absolute;
+
+  md-ink-bar{
+    height: 3px;
+  }
+}
+  md-tab-content {
+    //min-width: 9999px;
+   // position: absolute;
+  }
+
+  md-tab-no-content {
+    //min-width: 9999px;
+    //position: absolute;
+
+  }
+}
+
+

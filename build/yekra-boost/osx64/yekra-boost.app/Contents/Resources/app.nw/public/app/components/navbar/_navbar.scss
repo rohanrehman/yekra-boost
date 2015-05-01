@@ -1,0 +1,60 @@
+@import "compass/css3/border-radius";
+@import "compass/css3/images";
+//@import "compass/css3/filter";
+
+md-toolbar{
+  min-height: 44px; //defined in angular-material.css
+}
+
+.md-toolbar-tools{
+  background-color: black;
+  max-height: 44px;
+  @include border-top-radius(6px);
+}
+
+.md-autocomplete{
+
+  @include border-radius(20px);
+ // @include filter-blur(8px);
+
+  max-width: 300px;
+  height: 30px;
+  //padding-top: -6px;
+button{
+  top: 6px;
+  right: 8px;
+}
+  input:not(.md-input) {
+    top: -4px;
+  }
+  md-autocomplete-wrap {
+    height: 30px;
+    input {
+      padding-top: 0px;
+
+    }
+
+    //md-progress-linear {
+    //  .md-container {
+    //    transition: none;
+    //    top: auto;
+    //    max-width: 276px;
+    //    left: 12px;
+    //   // background-color: red;
+    //    height: 2px;
+    //  }
+    //}
+  }
+
+
+}
+.md-autocomplete-suggestions{
+  .li{
+  //  max-width: 276px;
+  }
+
+}
+
+md-toolbar h1 {
+  font-weight: normal;
+}

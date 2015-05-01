@@ -1,0 +1,179 @@
+@import "compass/css3/animation";
+@import "compass/css3/filter";
+
+
+
+.animate-show {
+
+  @include animation(swipe-right .3s ease-out);
+
+  &.ng-hide {
+    @include animation(swipe-left .3s ease-out);
+  }
+}
+
+md-grid-list{
+//overflow: hidden;
+}
+
+.animate-flip {
+
+ // @include filter(blur(1px));
+ //@include animation(blur .2s ease-in-out);
+
+ // @include animation(swing .6s ease-out);
+  @include animation(flipInY .6s ease-out);
+}
+
+
+.md-icon {
+  width: 50%;
+  height: 50%; }
+.md-icon svg {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+.s64 {
+  font-size: 64px; }
+.s32 {
+  font-size: 48px; }
+.md-icon.fa {
+  display: block;
+  padding-left: 0px; }
+.s32 span {
+  padding-left: 8px; }
+.md-grid-list {
+  margin: 8px; }
+
+.gray {
+  background: #f5f5f5; }
+
+.grey{
+  background: grey;
+}
+
+.channels-content{
+  padding: 0 200px 0 200px;
+  &.gt-md {
+    padding: 0;
+
+  }
+}
+
+md-select{
+  //min-height: 148px;
+}
+.md-select-label{
+  padding-top: 0;
+  margin-top: -6px;
+  //padding-bottom: 6px;
+}
+
+.md-grid-tile md-icon {
+  padding-bottom: 32px; }
+.md-grid-tile md-grid-tile-footer {
+  background: rgba(0, 0, 0, 0.68);
+  height: 24px; }
+.md-grid-tile-footer figcaption {
+  width: 100%; }
+.md-grid-tile-footer figcaption h3 {
+  margin: 0px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center; }
+
+@include keyframes(blur) {
+  from {  @include filter(blur(0px));}
+  to {  @include filter(blur(8px));}
+}
+
+
+
+@include keyframes(swipe-left) {
+  from { left: 0px;}
+  to { left: -200px;}
+}
+
+@include keyframes(swipe-right) {
+  from { left: -200px;}
+  to { left: 0px;}
+}
+
+
+
+
+.ng-animate {
+  &.ng-enter {
+    @include animation(fade-in .2s ease-out);
+
+  }
+
+  &.ng-click {
+
+    //@include animation(fade-out .4s ease-out);
+  }
+}
+
+
+.animate-repeat {
+  //line-height:40px;
+  //list-style:none;
+  /*box-sizing:border-box;*/
+  //border-bottom: 1px solid white;
+  //-webkit-transition: .3s ease all;
+  //transition: .3s ease all;
+}
+
+
+
+.animate-repeat.ng-enter{
+  opacity:0;
+ // max-height:0;
+}
+
+//.animate-repeat.ng-leave-stagger {
+//  /* this will have a 100ms delay between each successive leave animation */
+//  //-webkit-transition-delay: 0.2s;
+// // transition-delay: 0.2s;
+//
+////  -webkit-transition-duration: 0s;
+//  //transition-duration: 0s;
+//}
+
+/**
+ * Stagger ENTER ANIMATION
+ */
+.animate-repeat.ng-enter-stagger {
+
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+}
+
+
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+  transition: all ease 250ms ;
+}
+
+
+@include keyframes(move-up) {
+  from { top: 0px;}
+  to { top: -300px;}
+}
+@include keyframes(move-dwn) {
+  from { top: -300px;}
+  to { top: 0px;}
+}
+
+@include keyframes(fade-in) {
+  from { opacity: 0;}
+  to { opacity: .3;}
+}
+
+@include keyframes(fade-out) {
+  from { opacity: .3;}
+  to { opacity: 0;}
+}

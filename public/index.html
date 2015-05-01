@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<base href="/">-->
+    <title>YEKRA</title>
+
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/famous-angular/dist/famous-angular.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/2.0/animate.min.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="bower_components/bitdash_pro_2.1.3b/bitdashplayer.min.css">
+    <link rel="stylesheet" href="stylesheets/app.css">
+
+</head>
+
+
+<body layout="column"
+      layout-fill
+      ng-app="app"
+      ng-controller="appCtrl"
+
+        style="
+        -webkit-app-region: drag
+        ">
+
+<md-sidenav layout="column" class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+    <md-content style="min-height: 200px">
+    </md-content>
+    <md-content class="md-padding">
+        <md-button ng-click="close()" class="md-primary">
+            Close
+        </md-button>
+    </md-content>
+</md-sidenav>
+
+<div ng-viewport="top" style="z-index: 100"></div>
+<!--<div ng-viewport="modal"></div>-->
+
+<md-content style="padding: 0px 50px 0px 50px; ">
+
+    <div ng-viewport="hero"></div>
+
+    <md-content style="height:1200px">
+        <div ng-viewport="content" ng-animate="'animate'"></div>
+    </md-content>
+</md-content>
+
+<!--<div ng-viewport="side"></div>-->
+<!--</div>-->
+
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="./dist/router.es5.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/firebase/firebase.js"></script>
+<script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+<script src="bower_components/famous/dist/famous-global.js"></script>
+<script src="bower_components/famous-angular/dist/famous-angular.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="bower_components/bitdash_pro_2.1.3b/bitdash.min.js"></script>
+
+<!--<script src="bower_components/videogular/videogular.min.js"></script>-->
+<!--<script src="bower_components/videogular-controls/vg-controls.min.js"></script>-->
+<!--<script src="bower_components/videogular-overlay-play/vg-overlay-play.min.js"></script>-->
+<!--<script src="bower_components/videogular-poster/vg-poster.min.js"></script>-->
+<!--<script src="bower_components/videogular-buffering/vg-buffering.min.js"></script>-->
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/slick-carousel/slick/slick.js"></script>
+<script src="bower_components/angular-slick/dist/slick.js"></script>
+
+
+<script src="app/app.js"></script>
+<script src="app/services/authentication-service.js"></script>
+<script src="app/components/navbar/navbar.js"></script>
+<script src="app/components/navbar/navbar-service.js"></script>
+<script src="app/components/main/main.js"></script>
+<script src="app/components/slidenav/slidenav.js"></script>
+<script src="app/components/posters/posters.js"></script>
+<script src="app/components/recommended/recommended.js"></script>
+<script src="app/components/hero/hero.js"></script>
+<!--<script src="app/components/login/login.js"></script>-->
+<script src="app/components/media/player/player-directive.js"></script>
+
+
+
+</body>
+</html>

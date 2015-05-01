@@ -1,0 +1,63 @@
+<md-toolbar style="
+margin-top: 0px;
+background-color: black;
+">
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-sm aria-label="Settings">
+            <md-icon md-svg-icon="images/icons/menu.svg" style="color: white;"></md-icon>
+        </md-button>
+
+        <section layout="row" layout-sm="row" layout-align="start center">
+            <md-button ng-link="/" href="./" style="color: white;">
+                <img src="images/logo.png" alt="">
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Favorite">
+                <md-icon md-svg-icon="images/icons/favorite.svg" style="color: black;"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Favorite">
+                <md-icon md-svg-icon="images/icons/favorite.svg" style="color: black;"></md-icon>
+            </md-button>
+            <md-button class="md-icon-button" aria-label="Favorite">
+                <md-icon md-svg-icon="images/icons/favorite.svg" style="color: black;"></md-icon>
+            </md-button>
+        </section>
+
+        <span flex>
+                 <div ng-controller="autocompleteCtrl as ctrl" layout="row" layout-align="center center">
+
+                     <md-autocomplete class="md-autocomplete"
+                                      ng-disabled="ctrl.isDisabled"
+                                      md-no-cache="ctrl.noCache"
+                                      md-selected-item="ctrl.selectedItem"
+                                      md-search-text="ctrl.searchText"
+                                      md-selected-item-change="ctrl.selectedItemChange(item)"
+                                      md-items="item in ctrl.querySearch(ctrl.searchText)"
+                                      md-item-text="item.display"
+                                      placeholder="Search titles here..."
+                                      style="width: 300px;
+                                             left:-50px;
+                                      ">
+
+
+                         <span md-highlight-text="ctrl.searchText">{{item.display}}</span>
+                     </md-autocomplete>
+                     </form>
+                 </div>
+        </span>
+        <!--<md-button class="md-icon-button" aria-label="Favorite">-->
+        <!--<md-icon md-svg-icon="images/icons/favorite.svg" style="color: greenyellow;"></md-icon>-->
+        <!--</md-button>-->
+
+        <md-button ng-click="showAlert($event)" md-no-ink style="color: white;">LOG IN</md-button>
+        <!--<md-button ng-link="join" href="./join" md-no-ink style="color: white;">JOIN NOW</md-button>-->
+
+        <md-button class="md-icon-button" ng-click="toggleSidenav('right')" aria-label="More">
+            <md-icon md-svg-icon="images/icons/menu.svg" style="color: white;"></md-icon>
+        </md-button>
+
+    </div>
+
+</md-toolbar>
+<!--<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left"-->
+            <!--md-is-locked-open="$mdMedia('gt-sm')">-->
+<!--</md-sidenav>-->

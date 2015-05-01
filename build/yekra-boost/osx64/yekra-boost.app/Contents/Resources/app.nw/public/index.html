@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<base href="/">-->
+    <title>YEKRA</title>
+
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="bower_components/famous-angular/dist/famous-angular.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/2.0/animate.min.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick.css"/>-->
+    <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.0/slick-theme.css"/>-->
+    <!--<link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">-->
+    <link rel="stylesheet" href="bower_components/bitdash_pro_2.1.3b/bitdashplayer.min.css">
+    <link rel="stylesheet" href="stylesheets/app.css">
+
+</head>
+
+
+<body layout="column"
+      layout-fill
+      ng-app="app"
+      ng-controller="appCtrl"
+
+        style="
+        -webkit-app-region: drag
+        ">
+
+<md-sidenav layout="column" class="md-sidenav-right md-whiteframe-z2" md-component-id="right">
+
+
+    <md-content style="min-height: 200px">
+        <!--<div class="player" ng-player></div>-->
+    </md-content>
+
+
+    <md-content class="md-padding">
+        <!--<md-button ng-click="close()" class="md-primary">-->
+            <!--Close-->
+        <!--</md-button>-->
+    </md-content>
+
+
+</md-sidenav>
+<!--<md-toolbar style="-->
+<!--margin-top: 0px;-->
+<!--background-color: black;-->
+<!--">-->
+    <!--<div class="md-toolbar-tools">-->
+        <!--<md-button class="md-icon-button" ng-click="toggleSidenav('left')" hide-gt-sm aria-label="Settings">-->
+            <!--<md-icon md-svg-icon="images/icons/menu.svg" style="color: white;"></md-icon>-->
+        <!--</md-button>-->
+
+        <!--<section layout="row" layout-sm="row" layout-align="start center">-->
+            <!--<md-button ng-link="/" href="./" style="color: white;">-->
+                <!--<img src="images/logo.png" alt="">-->
+            <!--</md-button>-->
+            <!--<md-button class="md-icon-button" aria-label="Favorite">-->
+                <!--<md-icon md-svg-icon="images/icons/favorite.svg" style="color: black;"></md-icon>-->
+            <!--</md-button>-->
+            <!--<md-button class="md-icon-button" aria-label="Favorite">-->
+                <!--<md-icon md-svg-icon="images/icons/favorite.svg" style="color: black;"></md-icon>-->
+            <!--</md-button>-->
+            <!--<md-button class="md-icon-button" aria-label="Favorite">-->
+                <!--<md-icon md-svg-icon="images/icons/favorite.svg" style="color: black;"></md-icon>-->
+            <!--</md-button>-->
+        <!--</section>-->
+
+        <!--<span flex>-->
+                 <!--<div ng-controller="autocompleteCtrl as ctrl" layout="row" layout-align="center center">-->
+
+                     <!--<md-autocomplete class="md-autocomplete"-->
+                                      <!--ng-disabled="ctrl.isDisabled"-->
+                                      <!--md-no-cache="ctrl.noCache"-->
+                                      <!--md-selected-item="ctrl.selectedItem"-->
+                                      <!--md-search-text="ctrl.searchText"-->
+                                      <!--md-selected-item-change="ctrl.selectedItemChange(item)"-->
+                                      <!--md-items="item in ctrl.querySearch(ctrl.searchText)"-->
+                                      <!--md-item-text="item.display"-->
+                                      <!--placeholder="Search titles here..."-->
+                                      <!--style="width: 300px;-->
+                                             <!--left:-50px;-->
+                                      <!--">-->
+
+
+                         <!--<span md-highlight-text="ctrl.searchText">{{item.display}}</span>-->
+                     <!--</md-autocomplete>-->
+                     <!--</form>-->
+                 <!--</div>-->
+        <!--</span>-->
+        <!--&lt;!&ndash;<md-button class="md-icon-button" aria-label="Favorite">&ndash;&gt;-->
+        <!--&lt;!&ndash;<md-icon md-svg-icon="images/icons/favorite.svg" style="color: greenyellow;"></md-icon>&ndash;&gt;-->
+        <!--&lt;!&ndash;</md-button>&ndash;&gt;-->
+
+        <!--<md-button ng-click="showAlert($event)" md-no-ink style="color: white;">LOG IN</md-button>-->
+        <!--&lt;!&ndash;<md-button ng-link="join" href="./join" md-no-ink style="color: white;">JOIN NOW</md-button>&ndash;&gt;-->
+
+        <!--<md-button class="md-icon-button" ng-click="toggleSidenav('right')" aria-label="More">-->
+            <!--<md-icon md-svg-icon="images/icons/menu.svg" style="color: white;"></md-icon>-->
+        <!--</md-button>-->
+
+    <!--</div>-->
+
+<!--</md-toolbar>-->
+
+<div ng-viewport="top" style="z-index: 100"></div>
+<!--<div ng-viewport="login"></div>-->
+
+<md-content style="padding: 0px 50px 0px 50px; ">
+
+    <div ng-viewport="hero"></div>
+
+    <md-content style="height:1200px">
+        <div ng-viewport="main" ng-animate="'animate'"></div>
+    </md-content>
+</md-content>
+
+<!--<div ng-viewport="side"></div>-->
+<!--</div>-->
+
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="./dist/router.es5.js"></script>
+<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-aria/angular-aria.js"></script>
+<script src="bower_components/angular-material/angular-material.js"></script>
+<script src="bower_components/angular-messages/angular-messages.js"></script>
+<script src="bower_components/firebase/firebase.js"></script>
+<script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+<script src="bower_components/famous/dist/famous-global.js"></script>
+<script src="bower_components/famous-angular/dist/famous-angular.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="bower_components/bitdash_pro_2.1.3b/bitdash.min.js"></script>
+
+<script src="bower_components/videogular/videogular.min.js"></script>
+<script src="bower_components/videogular-controls/vg-controls.min.js"></script>
+<script src="bower_components/videogular-overlay-play/vg-overlay-play.min.js"></script>
+<script src="bower_components/videogular-poster/vg-poster.min.js"></script>
+<script src="bower_components/videogular-buffering/vg-buffering.min.js"></script>
+
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/slick-carousel/slick/slick.js"></script>
+<script src="bower_components/angular-slick/dist/slick.js"></script>
+
+
+<script src="app/app.js"></script>
+<script src="app/services/authentication-service.js"></script>
+<script src="app/components/navbar/navbar.js"></script>
+<script src="app/components/navbar/navbar-service.js"></script>
+<script src="app/components/main/main.js"></script>
+<script src="app/components/slidenav/slidenav.js"></script>
+<script src="app/components/channels/channels.js"></script>
+<script src="app/components/recommended/recommended.js"></script>
+<script src="app/components/hero/hero.js"></script>
+<script src="app/components/media/player/player-directive.js"></script>
+
+
+
+</body>
+</html>
