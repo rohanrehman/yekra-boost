@@ -1,5 +1,5 @@
 {
-  "name": "yekra-boost",
+  "name": "yekra-ws-pt1",
   "version": "0.0.0",
   "authors": [
     "Rohan Rehman <rohan.rehman@gmail.com>"
@@ -21,7 +21,10 @@
     "angularfire": "1.0.0",
     "angular-sanitize": "1.4.0-rc.0",
     "angular-messages": "1.4.0-rc.0",
-    "angular-slick": "~0.2.1"
+    "angular-slick": "~0.2.1",
+    "angular-material": "0.9.0-rc2-master-041ffe9",
+    "famous": "~0.3.5",
+    "famous-angular": "~0.5.2"
   },
   "resolutions": {
     "angular-animate": "1.4.0-rc.0",
@@ -30,7 +33,6 @@
     "angular-sanitize": "1.4.0-rc.0",
     "angular-resource": "1.4.0-rc.0",
     "angular-messages": "1.4.0-rc.0",
-    "famous": "0.3.5",
-
+    "famous": "~0.3.5"
   }
 }
