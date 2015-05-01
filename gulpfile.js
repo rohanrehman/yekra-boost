@@ -25,7 +25,7 @@ gulp.task('server', function () {
     //return gutil.log('Gulp is running!')
     connect.server({
         root: 'public',
-        port: 7000
+        port: 7700
     });
 });
 
